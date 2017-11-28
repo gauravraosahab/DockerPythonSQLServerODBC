@@ -1,5 +1,8 @@
 FROM python:3.6
 
+WORKDIR /
+ADD . /
+
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
 # update package list
